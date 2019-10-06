@@ -26,7 +26,7 @@
       <!-- content -->
       <div id="content">
         <div id="title">
-          <a href="/sns/public"><h1 id="main_title">Magic Room</h1></a>
+          <a href="/"><h1 id="main_title">Magic Room</h1></a>
         </div>
         <div id="writing_mypage">
           <div id="movie_post">
