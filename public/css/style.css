@@ -1,0 +1,264 @@
+@charset "utf-8";
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    color: #333;
+    background-color: #fff;
+    font-size: 1.6rem;
+}
+
+h1{
+  text-align: center;
+  font-size: 48px;
+  margin:20px 0px 0px;
+}
+
+#writing{
+  /* border: solid 1px #000; */
+  display: inline-block;
+  text-align: left;
+  /* width: auto; */
+  /* margin: 0px auto; */
+}
+
+#writing_mypage{
+  /* border: solid 1px #000; */
+  display: inline-block;
+  text-align: center;
+  width: 80%;
+  margin: 0px auto;
+}
+
+
+table{
+  padding: 0;
+}
+
+td,th{
+  margin: 0;
+  border: solid 1px #000;
+  border-collapse: collapse;
+}
+
+.thumb{
+  /* float: left; */
+  text-align: center;
+  border: solid 1px #000;
+  display: inline-block;
+  padding: 5px;
+  margin: 5px;
+}
+
+#tweet{
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #bbb;
+  margin: 10px auto;
+}
+
+/* #tweet button{
+  height: 100px;
+  background-color: rgba(255,255,255,0);
+  background-color: #fff;
+  border: none;
+} */
+
+#tweet button {
+  height: 50px;
+  width: 100px;
+  position: relative;
+  display: inline-block;
+  padding: 0.25em 0.5em;
+  text-decoration: none;
+  color: #FFF;
+  background: #03A9F4;/*色*/
+  border: solid 1px #0f9ada;/*線色*/
+  border-radius: 4px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
+  text-shadow: 0 1px 0 rgba(0,0,0,0.2);
+  margin-left: 20px;
+}
+
+#tweet button:active {
+  /*押したとき*/
+  border: solid 1px #03A9F4;
+  box-shadow: none;
+  text-shadow: none;
+}
+
+#tweet .button{
+  /* margin: auto; */
+  /* height: 110px; */
+  /* position: absolute; */
+  /* display: flex;
+  align-items: center; */
+  /* vertical-align: middle; */
+}
+
+
+#movie_post textarea{
+  height: 100px;
+  width: 300px;
+  border: none;
+  resize: none;
+  border-radius: 3px;
+}
+
+#movie_post{
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #bbb;
+  margin: 10px auto;
+}
+
+#movie_post input{
+  width: 300px;
+  margin: 10px auto;
+}
+
+#movie_post button {
+  height: 50px;
+  width: 100px;
+  position: relative;
+  display: inline-block;
+  padding: 0.25em 0.5em;
+  text-decoration: none;
+  color: #FFF;
+  background: #03A9F4;/*色*/
+  border: solid 1px #0f9ada;/*線色*/
+  border-radius: 4px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
+  text-shadow: 0 1px 0 rgba(0,0,0,0.2);
+  margin-bottom: 20px;
+}
+
+#movie_post button:active {
+  /*押したとき*/
+  border: solid 1px #03A9F4;
+  box-shadow: none;
+  text-shadow: none;
+}
+
+#tweet textarea{
+  height: 100px;
+  width: 340px;
+  border: none;
+  resize: none;
+  border-radius: 3px;
+}
+
+#content{
+  width: 80%;
+  margin:0px auto;
+  text-align: center;
+}
+
+#comment_form{
+  /* border: solid 1px black; */
+  width: 700px;
+  margin: 0px auto;
+  /* height: 100%; */
+}
+
+#mypage{
+  /* float: right; */
+  text-align: right;
+  font-size: 30px;
+  margin-top: 0px;
+}
+#magic_bar{
+  /* float: right; */
+  text-align: left;
+  font-size: 30px;
+  margin-top: 0px;
+}
+
+#main_title{
+  display: inline-block;
+  /* margin: auto; */
+}
+
+#link{
+  margin: 10px;
+  font-size: 30px;
+  text-align: right;
+}
+
+#title{
+  text-align: center;
+}
+.comment{
+  /* display: block; */
+  /* width: 90%; */
+  margin: 5px auto;
+  height: 100%;
+  background-color: #ccc;
+  padding: 10px 10px 25px;
+  border-radius: 5px;
+  position: relative;
+
+}
+
+
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+#link a {
+  color: #000;
+  text-decoration: none;
+  margin: 0px 20px;
+}
+
+a:visited {
+  color: #000;
+}
+
+video{
+  margin:40px 0px;
+  width: 640px;
+  height: 360px;
+}
+
+#contributor{
+  /* float: right; */
+  margin: 20px 10px 10px auto;
+  /* text-align: right; */
+  right: 10px;
+  position: absolute;
+  display: inline;
+}
+
+#comment_text{
+  /* display: inline-block; */
+    margin: 0px 0px;
+    word-break: break-all;
+    font-size: 20px;
+}
+
+.comment div{
+  margin: 0px auto;
+
+  display: inline;
+  width:100%;
+
+  line-height: 100%;
+}
+
+.thumb p{
+  margin:3px auto;
+
+}
+
+/* #movie_title{
+  margin
+} */
