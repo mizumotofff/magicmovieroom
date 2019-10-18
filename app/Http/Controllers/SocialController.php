@@ -130,7 +130,7 @@ class SocialController extends Controller
     public function store(Request $request)
     {
       $file = $request->file('file');
-      $name = $request->text('movie_name');
+      $name = $request->input('movie_name');
       // 第一引数はディレクトリの指定
       // 第二引数はファイル
       // 第三引数はpublickを指定することで、URLによるアクセスが可能となる
