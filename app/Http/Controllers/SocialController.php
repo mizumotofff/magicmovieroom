@@ -131,7 +131,7 @@ class SocialController extends Controller
     {
       $file = $request->file('file');
       $name = $request->input('movie_title');
-      $name = $name.".mp4";
+      $name_url = $name.".mp4";
       // 第一引数はディレクトリの指定
       // 第二引数はファイル
       // 第三引数はpublickを指定することで、URLによるアクセスが可能となる
@@ -139,9 +139,9 @@ class SocialController extends Controller
       // hogeディレクトリにアップロード
       // $path = Storage::disk('s3')->putFile('/hoge', $file, 'public');
       // ファイル名を指定する場合はputFileAsを利用する
-      $path = Storage::disk('s3')->putFileAs('/', $file, $name, 'public');
+      $path = Storage::disk('s3')->putFileAs('/', $file, $name_url, 'public');
       // return redirect('/');
-      $url = Storage::disk('s3')->url($name);
+      $url = Storage::disk('s3')->url($name_url);
 
       $com = new Movie;
       $com->text = $name;
