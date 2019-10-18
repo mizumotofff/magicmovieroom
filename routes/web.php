@@ -21,6 +21,9 @@ Route::get('/movie/{id}', 'SocialController@movie');
 Route::get('/mypage', 'SocialController@mypage');
 Route::get('/magic_bar', 'SocialController@magic_bar');
 // Route::post('/movie/{id}', 'SocialController@movie');
+Route::get('upload', 'SocialController@create');
+Route::post('upload', 'SocialController@store');
+
 
 Auth::routes();
 
