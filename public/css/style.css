@@ -32,6 +32,10 @@ h1{
   margin: 0px auto;
 }
 
+#writing_mypage #movies{
+  text-align: left;
+}
+
 
 table{
   padding: 0;

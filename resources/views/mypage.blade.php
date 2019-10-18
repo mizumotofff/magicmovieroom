@@ -28,6 +28,7 @@
       <form action="upload" method="post" enctype="multipart/form-data">
         {{ csrf_field() }}
         <input type="text" name="movie_title">
+        <input type="text" name="movie_title">
         <input type="file" name="file">
         <button type="submit">保存</button>
       </form>
@@ -50,12 +51,14 @@
               </form>
             </div>
         </div>
+        <div id="movies">
             <?php foreach($movies as $value):  ?>
               <div class="thumb">
                 <p><a href="movie/{{$value->id}}">{{ $value->text }}</a></p>
                 <a href="movie/{{$value->id}}"><img src="http://img.youtube.com/vi/{{$value->movie}}/default.jpg" height="140" width="220"></a>
                 <p>{{ $value->time }}</p>
             </div>
+        </div>
       <?php endforeach; ?>
 
         </div>
