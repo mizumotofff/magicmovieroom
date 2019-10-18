@@ -130,15 +130,21 @@ class SocialController extends Controller
     public function store(Request $request)
     {
       $file = $request->file('file');
+      $name = $request->text('movie_name');
       // 第一引数はディレクトリの指定
       // 第二引数はファイル
       // 第三引数はpublickを指定することで、URLによるアクセスが可能となる
-      $path = Storage::disk('s3')->putFile('/', $file, 'public');
+      // $path = Storage::disk('s3')->putFile('/', $file, 'public');
       // hogeディレクトリにアップロード
       // $path = Storage::disk('s3')->putFile('/hoge', $file, 'public');
       // ファイル名を指定する場合はputFileAsを利用する
-      // $path = Storage::disk('s3')->putFileAs('/', $file, 'hoge.jpg', 'public');
-      return redirect('/');
+      $path = Storage::disk('s3')->putFileAs('/', $file, $name, 'public');
+      // return redirect('/');
+      $url = Storage::url($name);
+
+      $movie = Movie::where("user_id",Auth::id())->get();
+      return view('mypage',array("movies" => $movie));
+
     }
 
 }
