@@ -27,6 +27,7 @@
 
       <form action="upload" method="post" enctype="multipart/form-data">
         {{ csrf_field() }}
+        <input type="text" name="movie_title">
         <input type="file" name="file">
         <button type="submit">保存</button>
       </form>
