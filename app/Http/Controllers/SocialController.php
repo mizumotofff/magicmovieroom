@@ -131,7 +131,7 @@ class SocialController extends Controller
     {
       $file = $request->file('file');
       $name = $request->input('movie_title');
-      $name = $name.".mp4"
+      $name = $name.".mp4";
       // 第一引数はディレクトリの指定
       // 第二引数はファイル
       // 第三引数はpublickを指定することで、URLによるアクセスが可能となる
