@@ -140,7 +140,7 @@ class SocialController extends Controller
       // ファイル名を指定する場合はputFileAsを利用する
       $path = Storage::disk('s3')->putFileAs('/', $file, $name."mp4", 'public');
       // return redirect('/');
-      $url = Storage::url($name);
+      $url = Storage::disk('s3')->url($name);
 
       $com = new Movie;
       $com->text = $name;
