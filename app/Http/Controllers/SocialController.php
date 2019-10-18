@@ -138,9 +138,17 @@ class SocialController extends Controller
       // hogeディレクトリにアップロード
       // $path = Storage::disk('s3')->putFile('/hoge', $file, 'public');
       // ファイル名を指定する場合はputFileAsを利用する
-      $path = Storage::disk('s3')->putFileAs('/', $file, $name, 'public');
+      $path = Storage::disk('s3')->putFileAs('/', $file, $name."mp4", 'public');
       // return redirect('/');
       $url = Storage::url($name);
+
+      $com = new Movie;
+      $com->text = $name;
+      $com->user_id = Auth::id();
+      $com->movie = $url;
+      $com->time = date("Y-m-d H:i:s");
+      $com->save();
+
 
       $movie = Movie::where("user_id",Auth::id())->get();
       return view('mypage',array("movies" => $movie));

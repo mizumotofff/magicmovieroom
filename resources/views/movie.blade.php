@@ -28,7 +28,7 @@
           <a href="/"><h1 id="main_title">Magic Room</h1></a>
 
         </div>
-        <video src="s3://magic-movie/gunman.mp4" controls></video>
+        <video src="https://magic-movie.s3-ap-northeast-1.amazonaws.com/gunman.mp4" controls></video>
         <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ $movie->movie }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
       </div>
 
