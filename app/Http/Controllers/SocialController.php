@@ -131,6 +131,7 @@ class SocialController extends Controller
     {
       $file = $request->file('file');
       $name = $request->input('movie_title');
+      $name = $name.".mp4"
       // 第一引数はディレクトリの指定
       // 第二引数はファイル
       // 第三引数はpublickを指定することで、URLによるアクセスが可能となる
@@ -138,7 +139,7 @@ class SocialController extends Controller
       // hogeディレクトリにアップロード
       // $path = Storage::disk('s3')->putFile('/hoge', $file, 'public');
       // ファイル名を指定する場合はputFileAsを利用する
-      $path = Storage::disk('s3')->putFileAs('/', $file, $name."mp4", 'public');
+      $path = Storage::disk('s3')->putFileAs('/', $file, $name, 'public');
       // return redirect('/');
       $url = Storage::disk('s3')->url($name);
 
@@ -149,7 +150,7 @@ class SocialController extends Controller
       $com->time = date("Y-m-d H:i:s");
       $com->save();
 
-
+https://magic-movie.s3.ap-northeast-1.amazonaws.com/whim3rd
       $movie = Movie::where("user_id",Auth::id())->get();
       return view('mypage',array("movies" => $movie));
 
