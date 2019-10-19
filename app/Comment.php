@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace magicmovieroom;
 
 use Illuminate\Database\Eloquent\Model;
 

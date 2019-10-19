@@ -1,15 +1,15 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace magicmovieroom\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Storage;
 
 use Illuminate\Support\Facades\Auth;
-use App\Comment;
-use App\Movie;
-use App\User;
+use magicmovieroom\Comment;
+use magicmovieroom\Movie;
+use magicmovieroom\User;
 
 class SocialController extends Controller
 {

@@ -18,7 +18,7 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-        <link rel="stylesheet" href="{{ secure_asset('css/style.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     </head>
     <body>
 
@@ -35,7 +35,7 @@
 
       <div id="content">
         <div id="title">
-          <a href="/"><h1 id="main_title">Magic Room</h1></a>
+          <a href="/magicmovieroom/public"><h1 id="main_title">Magic Room</h1></a>
         </div>
         <div id="writing_mypage">
           <div id="movie_post">

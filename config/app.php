@@ -169,11 +169,11 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        // App\Providers\BroadcastServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        magicmovieroom\Providers\AppServiceProvider::class,
+        magicmovieroom\Providers\AuthServiceProvider::class,
+        // magicmovieroom\Providers\BroadcastServiceProvider::class,
+        magicmovieroom\Providers\EventServiceProvider::class,
+        magicmovieroom\Providers\RouteServiceProvider::class,
 
     ],
 
