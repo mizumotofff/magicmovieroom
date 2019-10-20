@@ -58,8 +58,8 @@
                 <a href="movie/{{$value->id}}"><img src="http://img.youtube.com/vi/{{$value->movie}}/default.jpg" height="140" width="220"></a>
                 <p>{{ $value->time }}</p>
             </div>
-        </div>
       <?php endforeach; ?>
+    </div>
 
         </div>
       </div>
