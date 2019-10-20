@@ -24,14 +24,14 @@
 
 
       <!-- content -->
-
+<!-- 
       <form action="upload" method="post" enctype="multipart/form-data">
         {{ csrf_field() }}
         <input type="text" name="movie_title">
         <input type="text" name="movie_title">
         <input type="file" name="file">
         <button type="submit">保存</button>
-      </form>
+      </form> -->
 
       <div id="content">
         <div id="title">
@@ -40,13 +40,13 @@
         <div id="writing_mypage">
           <div id="movie_post">
             <div id="comment_form">
-              <form method="POST" action="movie_post">
+              <form action="upload" method="post" enctype="multipart/form-data">
 
                 {{ csrf_field() }}
                 <span>タイトル</span><br>
-                <input type="text" class="text" name="title"></input><br>
-                <span>url</span><br>
-                <input type="url" class="url" name="url"><br>
+                <input type="text" class="text" name="movie_title"><br>
+                <span>動画ファイル</span><br>
+                <input type="file" name="file"><br>
                 <button type="submit" value="書き込む">go</button>
               </form>
             </div>
