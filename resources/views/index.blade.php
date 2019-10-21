@@ -36,7 +36,7 @@
           <?php foreach($movies as $value):  ?>
             <div class="thumb">
               <p id="movie_title"><a href="movie/{{$value->id}}">{{ $value->text }}</a></p>
-              <a href="movie/{{$value->id}}"><img src="http://img.youtube.com/vi/{{$value->movie}}/default.jpg" height="140" width="220"></a>
+              <a href="movie/{{$value->id}}"><img src="{{$value->thumbnail}}" height="140" width="220"></a>
               <p>{{ $value->time }}</p>
           </div>
     <?php endforeach; ?>
