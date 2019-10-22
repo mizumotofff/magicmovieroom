@@ -60,7 +60,7 @@
         <div id="movies">
             <?php foreach($movies as $value):  ?>
               <div class="thumb">
-                <p><a href="movie/{{$value->id}}">{{ $value->text }}</a></p>
+                <p id="movie_title"><a href="movie/{{$value->id}}">{{ $value->text }}</a></p>
                 <a href="movie/{{$value->id}}"><img src="{{$value->thumbnail}}" height="140" width="220"></a>
                 <p>{{ $value->time }}</p>
             </div>

@@ -29,7 +29,7 @@
           <a href="/magicmovieroom/public"><h1 id="main_title">Magic Room</h1></a>
         </div>
         <div id="link">
-          <a href="magic_bar">magic bar</a>
+          <!-- <a href="magic_bar">magic bar</a> -->
           <a href="mypage">mypage</a>
         </div>
         <div id="writing">

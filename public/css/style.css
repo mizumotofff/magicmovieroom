@@ -105,6 +105,7 @@ td,th{
   margin: 5px;
   background-color: #444;
   color: #ddd;
+  border-radius: 5px;
 }
 
 .thumb img{
@@ -331,6 +332,6 @@ video{
   margin-top: 10px;
 }
 
-/* #movie_title{
-  margin
-} */
+#movie_title{
+  height: 25px;
+}
