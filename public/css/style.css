@@ -48,14 +48,6 @@ h1{
   color: #fff;
 }
 
-#movie_page h2{
-  color: #fff;
-  width: 700px;
-  text-align: left;
-  margin: auto auto 20px;
-  border-bottom: solid 1px #eee;
-}
-
 #writing{
   /* border: solid 1px #000; */
   display: inline-block;
@@ -200,15 +192,6 @@ td,th{
   border-radius: 3px;
 }
 
-
-
-#comment_form{
-  /* border: solid 1px black; */
-  width: 700px;
-  margin: 0px auto;
-  /* height: 100%; */
-  /* background-color: #222; */
-}
 
 #mypage{
   /* float: right; */
@@ -379,6 +362,26 @@ video{
   #thumbnail_post:hover{
     background-color: #a5bbfa;
   }
+
+  video {
+    width: 90vw;
+  }
+
+  #movie_page h2{
+    color: #fff;
+    width: 90vw;
+    text-align: left;
+    margin: auto auto 20px;
+    border-bottom: solid 1px #eee;
+  }
+
+  #comment_form{
+    /* border: solid 1px black; */
+    width: 90vw;
+    margin: 0px auto;
+    /* height: 100%; */
+    /* background-color: #222; */
+  }
 }
 
 @media screen and (min-width:1000px) {
@@ -408,5 +411,21 @@ video{
     background-color: #444;
     color: #ddd;
     border-radius: 5px;
+  }
+
+  #movie_page h2{
+    color: #fff;
+    width: 700px;
+    text-align: left;
+    margin: auto auto 20px;
+    border-bottom: solid 1px #eee;
+  }
+
+  #comment_form{
+    /* border: solid 1px black; */
+    width: 700px;
+    margin: 0px auto;
+    /* height: 100%; */
+    /* background-color: #222; */
   }
 }
