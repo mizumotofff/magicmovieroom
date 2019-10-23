@@ -46,13 +46,15 @@
                 <span id="comment_title">タイトル</span><br>
                 <input type="text" class="text" name="movie_title"><br>
                 <div id="mform">
-                  <span>動画ファイル</span><br>
-                  <input type="file" name="file">
-                </div>
+                  <label id="movie_button">動画ファイル
+                    <input type="file" id="file" name="file">
+                  </label>
+                </div><br>
                 <div id="tform">
-                  <span>サムネイル</span><br>
-                  <input type="file" name="thumbnail">
-                </div>
+                  <label id="thumbnail_post">サムネイル
+                    <input type="file" id="file" name="thumbnail">
+                  </label>
+                </div><br>
                 <button type="submit" value="書き込む">POST</button>
               </form>
             </div>

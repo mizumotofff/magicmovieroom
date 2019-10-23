@@ -341,6 +341,43 @@ video{
     background-color: #444;
     color: #ddd;
     border-radius: 5px;
+    width: 80vw;
+  }
+
+  #file{
+    display: none;
+  }
+
+  #movie_button{
+    background-color: #0C88CA;
+    width: 150px;
+    height: 50px;
+    display: block;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 10px;
+    transition: 0.3s;
+    margin: 10px auto;
+  }
+
+  #movie_button:hover{
+    background-color: #a5bbfa;
+  }
+
+  #thumbnail_post{
+    background-color: #0C88CA;
+    width: 150px;
+    height: 50px;
+    display: block;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 10px;
+    transition: 0.3s;
+    margin: 10px auto;
+  }
+
+  #thumbnail_post:hover{
+    background-color: #a5bbfa;
   }
 }
 
