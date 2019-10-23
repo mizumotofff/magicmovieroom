@@ -320,12 +320,12 @@ video{
     /* border: solid 1px #000; */
     display: inline-block;
     text-align: center;
-    width: 400px;
+    width: 90vw;
     margin: 0px auto;
   }
 
   #content{
-    width: 100vw;
+    width: 95vw;
     margin:0px auto;
     text-align: center;
     height:  95vh;
