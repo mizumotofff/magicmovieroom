@@ -64,13 +64,7 @@ h1{
   /* margin: 0px auto; */
 }
 
-#writing_mypage{
-  /* border: solid 1px #000; */
-  display: inline-block;
-  text-align: center;
-  width: 990px;
-  margin: 0px auto;
-}
+
 
 #writing_mypage #movies{
   /* text-align: left; */
@@ -94,18 +88,6 @@ td,th{
   margin: 0;
   border: solid 1px #000;
   border-collapse: collapse;
-}
-
-.thumb{
-  /* float: left; */
-  text-align: center;
-  border: solid 1px #000;
-  display: inline-block;
-  padding: 5px;
-  margin: 5px;
-  background-color: #444;
-  color: #ddd;
-  border-radius: 5px;
 }
 
 .thumb img{
@@ -218,12 +200,7 @@ td,th{
   border-radius: 3px;
 }
 
-#content{
-  width: 1100px;
-  margin:0px auto;
-  text-align: center;
-  height:  95vh;
-}
+
 
 #comment_form{
   /* border: solid 1px black; */
@@ -334,4 +311,65 @@ video{
 
 #movie_title{
   height: 25px;
+}
+
+
+@media screen and (max-width: 999px) {
+  /*　画面サイズ 499pxまで適用　*/
+  #writing_mypage{
+    /* border: solid 1px #000; */
+    display: inline-block;
+    text-align: center;
+    width: 400px;
+    margin: 0px auto;
+  }
+
+  #content{
+    width: 100vw;
+    margin:0px auto;
+    text-align: center;
+    height:  95vh;
+  }
+
+  .thumb{
+    /* float: left; */
+    text-align: center;
+    border: solid 1px #000;
+    display: block;
+    padding: 5px;
+    margin: 5px;
+    background-color: #444;
+    color: #ddd;
+    border-radius: 5px;
+  }
+}
+
+@media screen and (min-width:1000px) {
+  /*　画面サイズ 1000px以上から適用　*/
+  #writing_mypage{
+    /* border: solid 1px #000; */
+    display: inline-block;
+    text-align: center;
+    width: 990px;
+    margin: 0px auto;
+  }
+
+  #content{
+    width: 1100px;
+    margin:0px auto;
+    text-align: center;
+    height:  95vh;
+  }
+
+  .thumb{
+    /* float: left; */
+    text-align: center;
+    border: solid 1px #000;
+    display: inline-block;
+    padding: 5px;
+    margin: 5px;
+    background-color: #444;
+    color: #ddd;
+    border-radius: 5px;
+  }
 }
