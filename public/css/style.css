@@ -360,7 +360,7 @@ video{
 
   #tweet textarea{
     height: 100px;
-    width: 50vw;
+    width: 60vw;
     border: none;
     resize: none;
     border-radius: 3px;
@@ -368,7 +368,7 @@ video{
 
   #tweet button {
     height: 50px;
-    width: 30vw;
+    width: 20vw;
     position: relative;
     display: inline-block;
     padding: 0.25em 0.5em;
