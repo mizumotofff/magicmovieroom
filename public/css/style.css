@@ -9,6 +9,7 @@ body{
     background-color: #fff;
     font-size: 1.6rem;
     background-color: #222;
+    margin: 0;
 }
 
 #movie_page {
@@ -278,12 +279,12 @@ video{
     /* border: solid 1px #000; */
     display: inline-block;
     text-align: center;
-    width: 90vw;
+    /* width: 10vw; */
     margin: 0px auto;
   }
 
-  #content{
-    width: 95vw;
+  #my #content{
+    width: 90vw;
     margin:0px auto;
     text-align: center;
     height:  95vh;
@@ -291,15 +292,52 @@ video{
 
   .thumb{
     /* float: left; */
-    text-align: center;
-    border: solid 1px #000;
-    display: block;
-    padding: 5px;
-    margin: 5px;
-    background-color: #444;
+    text-align: left;
+    /* border: solid 1px #000; */
+    border-top: solid 1px #fff;
+    display: inline-flex;
+    /* padding: 5px; */
+    margin: 5px 0px;
+    /* background-color: #444; */
     color: #ddd;
-    border-radius: 5px;
-    width: 80vw;
+    /* border-radius: 5px; */
+    width: 90vw;
+  }
+
+  .thumb img{
+    border: solid 1px #000;
+    width: 160px;
+    height: 90px;
+    margin-left: 10px;
+    /* float: right; */
+    margin-top: 10px;
+  }
+
+  #movie_title{
+    height: 25px;
+    display: none;
+    /* float: right;
+    margin-right: 200px; */
+  }
+
+  #movie_time{
+    display: none;
+  }
+
+  #movie_2{
+    display: inline-block;
+    margin: auto auto auto 10px;
+    text-align: left;
+  }
+
+  #movie_post{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #666;
+    margin: 10px auto;
+    width: 90vw;
   }
 
   #file{
@@ -353,7 +391,7 @@ video{
   #comment_form{
     /* border: solid 1px black; */
     width: 90vw;
-    margin: 0px auto;
+    margin: 0px 0px;
     /* height: 100%; */
     /* background-color: #222; */
   }
@@ -450,5 +488,9 @@ video{
     box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
     text-shadow: 0 1px 0 rgba(0,0,0,0.2);
     margin-left: 20px;
+  }
+
+  #movie_2{
+    display: none;
   }
 }

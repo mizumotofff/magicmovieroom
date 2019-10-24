@@ -43,7 +43,7 @@
             <input type="hidden" name="id" value="{{ $movie->id }}">
             {{ csrf_field() }}
             <textarea class="text" name="text"></textarea>
-              <button type="submit" value="書き込む">go</button>
+              <button type="submit" value="書き込む">POST</button>
 
         </div>
       </form>

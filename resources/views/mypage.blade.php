@@ -64,7 +64,11 @@
               <div class="thumb">
                 <p id="movie_title"><a href="movie/{{$value->id}}">{{ $value->text }}</a></p>
                 <a href="movie/{{$value->id}}"><img src="{{$value->thumbnail}}" height="140" width="220"></a>
-                <p>{{ $value->time }}</p>
+                <p id="movie_time">{{ $value->time }}</p>
+                <div id="movie_2">
+                  <p id="movie_title2"><a href="movie/{{$value->id}}">{{ $value->text }}</a></p>
+                  <p id="movie_time2">{{ $value->time }}</p>
+                </div>
             </div>
       <?php endforeach; ?>
     </div>
