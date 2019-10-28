@@ -43,6 +43,7 @@
               <form action="upload" method="post" enctype="multipart/form-data">
 
                 {{ csrf_field() }}
+                <br>
                 <span id="comment_title">タイトル</span><br>
                 <input type="text" class="text" name="movie_title"><br>
                 <div id="mform">
