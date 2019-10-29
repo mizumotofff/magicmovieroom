@@ -38,7 +38,7 @@
             <p id="contributor">by {{ $value->name }}</p>
         </div>
         <?php endforeach; ?>
-        <form method="POST" action="/magicmovieroom/public/comment">
+        <form method="POST" action="/comment">
         <div id="tweet">
             <input type="hidden" name="id" value="{{ $movie->id }}">
             {{ csrf_field() }}
