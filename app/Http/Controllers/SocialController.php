@@ -167,6 +167,10 @@ https://magic-movie.s3.ap-northeast-1.amazonaws.com/whim3rd
         // $movies = Movie::all();
         $search = $request->input('search');
         $movies = Movie::where('text', 'LIKE',"%$search%")->get();
+
+        if($movies->isEmpty()){
+          return view('search_text');
+        }
         return view('index',array("movies" => $movies));
     }
 
