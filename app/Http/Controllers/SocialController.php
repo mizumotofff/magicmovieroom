@@ -161,7 +161,6 @@ class SocialController extends Controller
       $com->time = date("Y-m-d H:i:s");
       $com->save();
 
-https://magic-movie.s3.ap-northeast-1.amazonaws.com/whim3rd
       $movie = Movie::where("user_id",Auth::id())->get();
       return view('mypage',array("movies" => $movie));
 
