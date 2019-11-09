@@ -129,6 +129,10 @@ class SocialController extends Controller
 
     public function store(Request $request)
     {
+      $validatedData = $request->validate([
+        'file' => 'mimes:mp4',
+        'thumbnail' => 'required',
+      ]);
       $file = $request->file('file');
       $name = $request->input('movie_title');
       $name_url = $name.".mp4";
@@ -149,6 +153,7 @@ class SocialController extends Controller
       $url_pic = Storage::disk('s3')->url($name_pic);
 
       $com = new Movie;
+
       $com->text = $name;
       $com->user_id = Auth::id();
       $com->movie = $url;
