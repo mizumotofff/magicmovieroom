@@ -3,7 +3,8 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
+        <script src="{{ asset('js/jquery-3.4.1.min.js') }}"></script>
+        <script src="{{ asset('js/mypage.js') }}"></script>
         <title>Magic Room</title>
         <script src="http://maps.google.com/maps/api/js?key=AIzaSyD3J7gJb9WgxkAiNRJ6r_hRw---SSRC2ZE&language=ja"></script>
 
@@ -48,12 +49,12 @@
                 <input type="text" class="text" name="movie_title"><br>
                 <div id="mform">
                   <label id="movie_button">動画ファイル
-                    <input type="file" id="file" name="file">
+                    <input type="file" id="filem" name="file">
                   </label>
                 </div><br>
                 <div id="tform">
                   <label id="thumbnail_post">サムネイル
-                    <input type="file" id="file" name="thumbnail">
+                    <input type="file" id="filet" name="thumbnail">
                   </label>
                 </div><br>
                 <button type="submit" value="書き込む">POST</button>

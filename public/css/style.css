@@ -21,6 +21,30 @@ body{
                                            #000000 15px); */
 }
 
+#search_text{
+  border:0;
+  padding:10px;
+  font-size:1.3em;
+  color:#aaa;
+  border:solid 1px #ccc;
+  margin:30px auto 20px;
+  width:300px;
+  display: inline-flex;
+}
+
+#search_button{
+  border:solid 1px #ccc;
+  height: 40px;
+  line-height: 40px;
+  margin:0 0 20px;
+  font-size:1.2em;
+  text-transform:uppercase;
+  font-weight:bold;
+  color:#333;
+  cursor:pointer;
+  display: inline-flex;
+}
+
 #footer{
   position: fixed;
   bottom: 0;
@@ -136,6 +160,15 @@ td,th{
   background-color: #666;
   margin: 10px auto;
 }
+
+#filem{
+  display: none;
+}
+
+#filet{
+  display: none;
+}
+
 
 #movie_post input{
   width: 300px;
@@ -272,6 +305,9 @@ video{
   height: 25px;
 }
 
+.filename{
+  font-size: 20px;
+}
 
 @media screen and (max-width: 999px) {
   /*　画面サイズ 499pxまで適用　*/
@@ -338,10 +374,6 @@ video{
     background-color: #666;
     margin: 10px auto;
     width: 90vw;
-  }
-
-  #file{
-    display: none;
   }
 
   #movie_button{
@@ -436,10 +468,6 @@ video{
     margin:0px auto;
     text-align: center;
     height:  95vh;
-  }
-
-  #file{
-    display: none;
   }
 
   #movie_button{

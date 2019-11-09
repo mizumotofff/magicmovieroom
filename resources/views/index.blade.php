@@ -19,6 +19,7 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+        <script src="{{ asset('js/jquery-3.4.1.min.js') }}"></script>
     </head>
     <body>
 
@@ -27,6 +28,12 @@
       <div id="content">
         <div id="title">
           <a href="/"><h1 id="main_title">Magic Room</h1></a>
+        </div>
+        <div id="search_form">
+          <form action="search" method="get">
+            <input type="text" name="search" id="search_text">
+            <button type="submit" id="search_button">SEARCH</button>
+          </form>
         </div>
         <div id="link">
           <!-- <a href="magic_bar">magic bar</a> -->
