@@ -131,7 +131,7 @@ class SocialController extends Controller
     {
       $validatedData = $request->validate([
         'file' => 'required|mimes:mp4',
-        'thumbnail' => 'required|mimes:jpg,png.bmp',
+        'thumbnail' => 'required|mimes:jpg,png,bmp',
         'movie_title' => 'required|max:100',
       ]);
       $file = $request->file('file');
