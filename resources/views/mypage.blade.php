@@ -22,18 +22,6 @@
         <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
     </head>
     <body id="my">
-
-
-      <!-- content -->
-<!--
-      <form action="upload" method="post" enctype="multipart/form-data">
-        {{ csrf_field() }}
-        <input type="text" name="movie_title">
-        <input type="text" name="movie_title">
-        <input type="file" name="file">
-        <button type="submit">保存</button>
-      </form> -->
-
       <div id="content">
         <div id="title">
           <a href="/"><h1 id="main_title">Magic Room</h1></a>
@@ -47,15 +35,30 @@
                 <br>
                 <span id="comment_title">タイトル</span><br>
                 <input type="text" class="text" name="movie_title"><br>
+                @if($errors->has('movie_title'))
+                  @foreach ($errors->get('movie_title') as $error)
+                    <span class="error">{{ $error }}</span><br>
+                  @endforeach
+                @endif
                 <div id="mform">
                   <label id="movie_button">動画ファイル
                     <input type="file" id="filem" name="file">
                   </label>
+                  @if($errors->has('file'))
+                    @foreach ($errors->get('file') as $error)
+                      <span class="error">{{ $error }}</span><br>
+                    @endforeach
+                  @endif
                 </div><br>
                 <div id="tform">
                   <label id="thumbnail_post">サムネイル
                     <input type="file" id="filet" name="thumbnail">
                   </label>
+                  @if($errors->has('thumbnail'))
+                    @foreach ($errors->get('thumbnail') as $error)
+                      <span class="error">{{ $error }}</span><br>
+                    @endforeach
+                  @endif
                 </div><br>
                 <button type="submit" value="書き込む">POST</button>
               </form>

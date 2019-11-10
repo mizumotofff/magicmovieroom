@@ -143,6 +143,9 @@ td,th{
   /* vertical-align: middle; */
 }
 
+.error{
+  color: #ff4455;
+}
 
 #movie_post textarea{
   height: 100px;
@@ -333,7 +336,7 @@ video{
     /* border-top: solid 1px #fff; */
     display: inline-flex;
     /* padding: 5px; */
-    margin: 5px 0px;
+    margin: 4px 0px;
     /* background-color: #444; */
     color: #ddd;
     /* border-radius: 5px; */
@@ -508,7 +511,7 @@ video{
     border: solid 1px #000;
     display: inline-block;
     padding: 5px;
-    margin: 5px;
+    margin: 4px;
     background-color: #444;
     color: #ddd;
     border-radius: 5px;

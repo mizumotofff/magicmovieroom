@@ -130,8 +130,9 @@ class SocialController extends Controller
     public function store(Request $request)
     {
       $validatedData = $request->validate([
-        'file' => 'mimes:mp4',
-        'thumbnail' => 'required',
+        'file' => 'required|mimes:mp4',
+        'thumbnail' => 'required|mimes:jpg,png.bmp',
+        'movie_title' => 'required|max:100',
       ]);
       $file = $request->file('file');
       $name = $request->input('movie_title');
@@ -177,5 +178,13 @@ class SocialController extends Controller
         }
         return view('index',array("movies" => $movies));
     }
+
+    public function messages()
+{
+    return [
+        'title.required' => 'A title is required',
+        'thumbnail.required'  => 'サムネイルを指定してください。',
+    ];
+}
 
 }
