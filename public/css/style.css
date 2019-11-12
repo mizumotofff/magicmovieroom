@@ -21,29 +21,7 @@ body{
                                            #000000 15px); */
 }
 
-#search_text{
-  border:0;
-  padding:10px;
-  font-size:1.3em;
-  color:#333;
-  border:solid 1px #ccc;
-  margin:30px auto 20px;
-  width:300px;
-  display: inline-flex;
-}
 
-#search_button{
-  border:solid 1px #ccc;
-  height: 40px;
-  line-height: 40px;
-  margin:0 0 20px;
-  font-size:1.2em;
-  text-transform:uppercase;
-  font-weight:bold;
-  color:#333;
-  cursor:pointer;
-  display: inline-flex;
-}
 
 #footer{
   position: fixed;
@@ -352,6 +330,30 @@ video{
     margin-top: 10px;
   }
 
+  #search_text{
+    border:0;
+    padding:10px;
+    font-size:1.3em;
+    color:#333;
+    border:solid 1px #ccc;
+    margin:30px auto 20px;
+    width:300px;
+    display: block;
+  }
+
+  #search_button{
+    border:solid 1px #ccc;
+    height: 40px;
+    line-height: 40px;
+    margin:0 auto 20px;
+    font-size:1.2em;
+    text-transform:uppercase;
+    font-weight:bold;
+    color:#333;
+    cursor:pointer;
+    display: block;
+  }
+
   #movie_title{
     height: 25px;
     display: none;
@@ -458,6 +460,31 @@ video{
 
 @media screen and (min-width:1000px) {
   /*　画面サイズ 1000px以上から適用　*/
+
+  #search_text{
+    border:0;
+    padding:10px;
+    font-size:1.3em;
+    color:#333;
+    border:solid 1px #ccc;
+    margin:30px auto 20px;
+    width:300px;
+    display: inline-flex;
+  }
+
+  #search_button{
+    border:solid 1px #ccc;
+    height: 40px;
+    line-height: 40px;
+    margin:0 0 20px;
+    font-size:1.2em;
+    text-transform:uppercase;
+    font-weight:bold;
+    color:#333;
+    cursor:pointer;
+    display: inline-flex;
+  }
+
   #writing_mypage{
     /* border: solid 1px #000; */
     display: inline-block;
