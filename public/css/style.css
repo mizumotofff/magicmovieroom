@@ -14,14 +14,7 @@ body{
 
 #movie_page {
     text-align: center;
-    /* background : repeating-linear-gradient(to right,
-                                           #990000,
-                                           #990000 8px,
-                                           #000000 0,
-                                           #000000 15px); */
 }
-
-
 
 #footer{
   position: fixed;
@@ -52,24 +45,11 @@ h1{
 }
 
 #writing{
-  /* border: solid 1px #000; */
   display: inline-block;
   text-align: left;
-  /* width: auto; */
-  /* margin: 0px auto; */
 }
 
-
-
 #writing_mypage #movies{
-  /* text-align: left; */
-  /* display: flex; */
-  /* align-items: center; */
-  /* justify-content: center; */
-  /* width: 100vw; */
-  /* background-color: #bbb; */
-  /* margin: 10px auto; */
-
   display: inline-block;
   text-align: left;
 }
@@ -98,27 +78,11 @@ td,th{
   margin: 10px auto;
 }
 
-/* #tweet button{
-  height: 100px;
-  background-color: rgba(255,255,255,0);
-  background-color: #fff;
-  border: none;
-} */
-
 #tweet button:active {
   /*押したとき*/
-  border: solid 1px #03A9F4;
+  border: solid 1px #000;
   box-shadow: none;
   text-shadow: none;
-}
-
-#tweet .button{
-  /* margin: auto; */
-  /* height: 110px; */
-  /* position: absolute; */
-  /* display: flex;
-  align-items: center; */
-  /* vertical-align: middle; */
 }
 
 .error{
@@ -177,20 +141,17 @@ td,th{
 }
 
 #movie_post button:active {
-  /*押したとき*/
   border: solid 1px #03A9F4;
   box-shadow: none;
   text-shadow: none;
 }
 
 #mypage{
-  /* float: right; */
   text-align: right;
   font-size: 30px;
   margin-top: 0px;
 }
 #magic_bar{
-  /* float: right; */
   text-align: left;
   font-size: 30px;
   margin-top: 0px;
@@ -198,7 +159,6 @@ td,th{
 
 #main_title{
   display: inline-block;
-  /* margin: auto; */
 }
 
 #link{
@@ -212,20 +172,14 @@ td,th{
 }
 .comment{
   text-align: left;
-  /* display: block; */
-  /* width: 90%; */
   margin: 5px auto;
   height: 100%;
-  /* background-color: #ccc; */
   background-color: #222;
   padding: 10px 10px 25px;
   border-radius: 5px;
   position: relative;
   color: #fff;
-
 }
-
-
 
 a {
   color: #fff;
@@ -359,16 +313,10 @@ video{
   }
 
   .thumb{
-    /* float: left; */
     text-align: left;
-    /* border: solid 1px #000; */
-    /* border-top: solid 1px #fff; */
     display: inline-flex;
-    /* padding: 5px; */
     margin: 4px 0px;
-    /* background-color: #444; */
     color: #ddd;
-    /* border-radius: 5px; */
     width: 90vw;
   }
 
@@ -377,7 +325,6 @@ video{
     width: 160px;
     height: 90px;
     margin-left: 10px;
-    /* float: right; */
     margin-top: 10px;
   }
 
@@ -408,8 +355,6 @@ video{
   #movie_title{
     height: 25px;
     display: none;
-    /* float: right;
-    margin-right: 200px; */
   }
 
   #movie_time{
@@ -477,11 +422,8 @@ video{
   }
 
   #comment_form{
-    /* border: solid 1px black; */
     width: 90vw;
     margin: 0px auto;
-    /* height: 100%; */
-    /* background-color: #222; */
   }
 
   #tweet textarea{
@@ -500,8 +442,8 @@ video{
     padding: 0.25em 0.5em;
     text-decoration: none;
     color: #FFF;
-    background: #03A9F4;/*色*/
-    border: solid 1px #0f9ada;/*線色*/
+    background: #111;/*色*/
+    border: solid 1px #333;/*線色*/
     border-radius: 4px;
     box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
     text-shadow: 0 1px 0 rgba(0,0,0,0.2);
