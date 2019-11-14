@@ -7,15 +7,6 @@
         <title>Magic Room</title>
         <script src="http://maps.google.com/maps/api/js?key=AIzaSyD3J7gJb9WgxkAiNRJ6r_hRw---SSRC2ZE&language=ja"></script>
 
-        <style>
-        html { height: 100% }
-        body { height: 100% }
-        #map {
-  height: 400px;
-  width: 600px;
-}
-        </style>
-
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
