@@ -64,15 +64,8 @@ class SocialController extends Controller
       $com->movie_id = $id;
       $com->time = date("Y-m-d H:i:s");
       $com->save();
-      // var_dump($request->name);
 
-      // $comment = Comment::all();
-      // return view('index',array("texts" => $comment));
-      // return redirect()->action('SocialController@index');
-      // return view('index');
       return redirect()->action('SocialController@movie',array("id" => $id));
-      // return redirect('/');
-
     }
 
 
@@ -80,9 +73,7 @@ class SocialController extends Controller
 
       $validatedData = $request->validate([
         'title' => 'required|max:255',
-
       ]);
-
 
       $a = $_POST;
       $youtube_id = explode("=",$request->url);
@@ -93,23 +84,15 @@ class SocialController extends Controller
       $com->movie = $youtube_id[1];
       $com->time = date("Y-m-d H:i:s");
       $com->save();
-      // var_dump($request->name);
 
       $comment = movie::all();
-      // return view('index',array("texts" => $comment));
       return redirect()->action('SocialController@index');
-      // return view('index');
-      // return redirect()->action('SocialController@movie',array("id" => $id));
-      // return redirect('/');
-
     }
 
     public function movie($id){
-      // var_dump($id);
       $id = intval($id);
 
       $movie = Movie::where('id', $id)->first();
-      // $comment = Comment::where('movie_id', $id)->get();
       $comment = DB::table('comment')
       ->leftJoin('users', 'comment.user_id', '=', 'users.id')
       ->where('movie_id', $id)->get();
@@ -119,7 +102,6 @@ class SocialController extends Controller
 
     public function react(){
       return response()->json(['apple' => 'red']);
-      // return ['apple' => 'red', 'peach' => 'pink'];
     }
 
     public function create()
@@ -137,16 +119,10 @@ class SocialController extends Controller
       $file = $request->file('file');
       $name = $request->input('movie_title');
       $name_url = $name.".mp4";
-      // 第一引数はディレクトリの指定
-      // 第二引数はファイル
+
       $file_pic = $request->file('thumbnail');
       $name_pic = $request->file('thumbnail')->getClientOriginalName().'.'.$request->file('thumbnail')->getClientOriginalExtension();
-      // $name_url = $name.".mp4";
-      // 第三引数はpublickを指定することで、URLによるアクセスが可能となる
-      // $path = Storage::disk('s3')->putFile('/', $file, 'public');
-      // hogeディレクトリにアップロード
-      // $path = Storage::disk('s3')->putFile('/hoge', $file, 'public');
-      // ファイル名を指定する場合はputFileAsを利用する
+
       $path = Storage::disk('s3')->putFileAs('/', $file, $name_url, 'public');
       $path = Storage::disk('s3')->putFileAs('/', $file_pic, $name_pic, 'public');
       // return redirect('/');
@@ -178,13 +154,5 @@ class SocialController extends Controller
         }
         return view('index',array("movies" => $movies));
     }
-
-    public function messages()
-{
-    return [
-        'title.required' => 'A title is required',
-        'thumbnail.required'  => 'サムネイルを指定してください。',
-    ];
-}
 
 }
