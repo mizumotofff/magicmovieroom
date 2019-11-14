@@ -587,4 +587,51 @@ video{
   #movie_2{
     display: none;
   }
+
+  .form-control{
+    height: 40px;
+    width: 400px;
+    font-size: 20px;
+  }
+
+  .login{
+    margin-top: 30px;
+  }
+
+  .login__title{
+    text-align: center;
+    font-size: 48px;
+  }
+  .loginForm{
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .loginForm__email, .loginForm__password{
+    font-size: 48px;
+    margin: 40px auto 20px;
+  }
+
+  .loginForm__remember{
+    font-size: 24px;
+  }
+
+  .loginForm__submit{
+    margin: 20px auto;;
+    font-size: 24px;
+  }
+
+  .loginForm__submit--button{
+    width: 100px;
+    height: 50px;
+    font-size: 24px;
+  }
+
+  .header{
+    text-align: right;
+    padding-right: 30px;
+    font-size: 20px;
+  }
+
+
 }
