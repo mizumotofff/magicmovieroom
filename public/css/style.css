@@ -645,7 +645,7 @@ video{
   }
 
   .loginForm__email, .loginForm__password,.register__form{
-    font-size: 48px;
+    font-size: 36px;
     margin: 40px auto 20px;
   }
 

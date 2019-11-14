@@ -13,8 +13,6 @@
         <script src="{{ asset('js/jquery-3.4.1.min.js') }}"></script>
     </head>
     <body>
-
-
       <!-- content -->
       <div id="content">
         <div id="title">
@@ -27,7 +25,6 @@
           </form>
         </div>
         <div id="link">
-          <!-- <a href="magic_bar">magic bar</a> -->
           <a href="mypage">mypage</a>
         </div>
         <div id="writing">
@@ -40,56 +37,9 @@
                 <p id="movie_title2"><a href="movie/{{$value->id}}">{{ $value->text }}</a></p>
                 <p id="movie_time2">{{ $value->time }}</p>
               </div>
-          </div>
-    <?php endforeach; ?>
+           </div>
+         <?php endforeach; ?>
         </div>
-
-        <!-- <td class="d-none d-md-table-cell"><a class="btn btn-success" href="http://localhost/sample/public/drinks/list/makerorm/{{$value->id}}">詳細ページ</a></td>
-        <form  method="POST" action="http://localhost/sample/public/drinks/list/destroyorm/{{$value->id}}">
-        {{ csrf_field() }}
-        <input name="_method" type="hidden" value="DELETE">
-        <input type="submit" value="削除" class="btn btn-danger">
-      </form>
-    </td> -->
-
-
       </div>
-
-
-
-
-
-
-        <!-- <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-            </div>
-        </div> -->
     </body>
 </html>

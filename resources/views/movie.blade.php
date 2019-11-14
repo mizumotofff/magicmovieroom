@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     </head>
     <body id="movie_page">
-      @if ($errors->any())
+    @if ($errors->any())
     <div class="alert alert-danger">
         <ul>
             @foreach ($errors->all() as $error)
@@ -20,36 +20,31 @@
             @endforeach
         </ul>
     </div>
-@endif
-
+    @endif
       <!-- content -->
       <div id="content">
         <div id="title">
           <a href="/"><h1 id="main_title">Magic Room</h1></a>
-
         </div>
         <video src="{{ $movie->movie }}" controls></video>
-        <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ $movie->movie }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
         <h2 id="content__title">{{ $movie->text}}</h2>
-      <div id="comment_form">
-        <?php foreach($texts as $value):  ?>
-          <div class="comment">
-            <div id="comment_text">{!! nl2br(e($value->text)) !!}</div>
-            <p id="contributor">by {{ $value->name }}</p>
-        </div>
-        <?php endforeach; ?>
-        <form method="POST" action="/comment">
-        <div id="tweet">
+        <div id="comment_form">
+          <?php foreach($texts as $value):  ?>
+            <div class="comment">
+              <div id="comment_text">{!! nl2br(e($value->text)) !!}</div>
+              <p id="contributor">by {{ $value->name }}</p>
+            </div>
+          <?php endforeach; ?>
+          <form method="POST" action="/comment">
+            <div id="tweet">
             <input type="hidden" name="id" value="{{ $movie->id }}">
             {{ csrf_field() }}
             <textarea class="text" name="text"></textarea>
               <button type="submit" value="書き込む">POST</button>
 
+            </div>
+          </form>
         </div>
-      </form>
       </div>
-    </div>
-    <!-- <img id="footer" src="{{ asset('image/halo.png') }}" -->
-
     </body>
 </html>

@@ -54,8 +54,8 @@
                 <button type="submit" value="書き込む">POST</button>
               </form>
             </div>
-        </div>
-        <div id="movies">
+          </div>
+          <div id="movies">
             <?php foreach($movies as $value):  ?>
               <div class="thumb">
                 <p id="movie_title"><a href="movie/{{$value->id}}">{{ $value->text }}</a></p>
@@ -65,57 +65,10 @@
                   <p id="movie_title2"><a href="movie/{{$value->id}}">{{ $value->text }}</a></p>
                   <p id="movie_time2">{{ $value->time }}</p>
                 </div>
-            </div>
-      <?php endforeach; ?>
-    </div>
-
+              </div>
+            <?php endforeach; ?>
+          </div>
         </div>
       </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <!-- <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-            </div>
-        </div> -->
     </body>
 </html>
