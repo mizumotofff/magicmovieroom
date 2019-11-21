@@ -244,49 +244,9 @@ video{
   font-size: 20px;
 }
 
-.form-control{
-  height: 40px;
-  width: 400px;
-  font-size: 20px;
-}
-
-.login ,.register{
-  margin-top: 30px;
-}
-
-.login__title ,.register__title{
-  text-align: center;
-  font-size: 48px;
-}
-.loginForm{
-  margin: 0 auto;
-  text-align: center;
-}
-
-.loginForm__remember{
-  font-size: 24px;
-}
-
-.loginForm__submit{
-  margin: 20px auto;;
-  font-size: 24px;
-}
-
-.loginForm__submit--button ,.register__submit--button{
-  width: 130px;
-  height: 50px;
-  font-size: 24px;
-}
-
 .register{
   margin: 0 auto;
   text-align: center;
-}
-
-.header{
-  text-align: right;
-  padding-right: 30px;
-  font-size: 20px;
 }
 
 .loggedin__message{
@@ -454,6 +414,52 @@ video{
     font-size: 24px;
     margin: 20px auto 10px;
   }
+
+  .login ,.register{
+    margin-top: 30px;
+    width: 100vw;
+  }
+
+  .login__title ,.register__title{
+    text-align: center;
+    font-size: 48px;
+  }
+  .loginForm{
+    margin: 0 auto;
+    text-align: center;
+    width: 100vw;
+  }
+
+  .loginForm__remember{
+    font-size: 24px;
+  }
+
+  .loginForm__submit{
+    margin: 20px auto;;
+    font-size: 24px;
+  }
+
+  .loginForm__submit--button ,.register__submit--button{
+    width: 130px;
+    height: 50px;
+    font-size: 24px;
+    display: block;
+    margin: 0 auto 30px;
+  }
+
+  .form-control{
+    height: 40px;
+    width: 80vw;
+    font-size: 20px;
+    margin: 0 auto;
+    display: inline-block;
+  }
+
+  .header{
+    text-align: right;
+    padding-right: 10px;
+    font-size: 20px;
+  }
 }
 
 @media screen and (min-width:1000px) {
@@ -591,5 +597,43 @@ video{
     margin: 40px auto 20px;
   }
 
+  .login ,.register{
+    margin-top: 30px;
+  }
 
+  .login__title ,.register__title{
+    text-align: center;
+    font-size: 48px;
+  }
+  .loginForm{
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .loginForm__remember{
+    font-size: 24px;
+  }
+
+  .loginForm__submit{
+    margin: 20px auto;;
+    font-size: 24px;
+  }
+
+  .loginForm__submit--button ,.register__submit--button{
+    width: 130px;
+    height: 50px;
+    font-size: 24px;
+  }
+
+  .form-control{
+    height: 40px;
+    width: 400px;
+    font-size: 20px;
+  }
+
+  .header{
+    text-align: right;
+    padding-right: 30px;
+    font-size: 20px;
+  }
 }

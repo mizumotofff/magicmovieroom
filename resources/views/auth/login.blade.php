@@ -17,7 +17,7 @@
               <a class="header__login" href="{{ route('login') }}">{{ __('Login') }}</a>
               <a class="header__register" href="{{ route('register') }}">{{ __('Register') }}</a>
           @endguest
-
+        </header>
     <div class="login">
        <div class="login__title">{{ __('Login') }}</div>
        <div class="loginForm">
