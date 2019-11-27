@@ -24,7 +24,7 @@
 
                 {{ csrf_field() }}
                 <br>
-                <span id="comment_title">タイトル</span><br>
+                <span id="comment_title">Title</span><br>
                 <input type="text" class="text" name="movie_title"><br>
                 @if($errors->has('movie_title'))
                   @foreach ($errors->get('movie_title') as $error)
@@ -32,7 +32,7 @@
                   @endforeach
                 @endif
                 <div id="mform">
-                  <label id="movie_button">動画ファイル
+                  <label id="movie_button">Movie
                     <input type="file" id="filem" name="file">
                   </label>
                   @if($errors->has('file'))
@@ -42,7 +42,7 @@
                   @endif
                 </div><br>
                 <div id="tform">
-                  <label id="thumbnail_post">サムネイル
+                  <label id="thumbnail_post">Thumbnail
                     <input type="file" id="filet" name="thumbnail">
                   </label>
                   @if($errors->has('thumbnail'))
@@ -58,8 +58,8 @@
           <div id="movies">
             <?php foreach($movies as $value):  ?>
               <div class="thumb">
+                <a href="movie/{{$value->id}}"><img src="{{$value->thumbnail}}"></a>
                 <p id="movie_title"><a href="movie/{{$value->id}}">{{ $value->text }}</a></p>
-                <a href="movie/{{$value->id}}"><img src="{{$value->thumbnail}}" height="140" width="220"></a>
                 <p id="movie_time">{{ $value->time }}</p>
                 <div id="movie_2">
                   <p id="movie_title2"><a href="movie/{{$value->id}}">{{ $value->text }}</a></p>

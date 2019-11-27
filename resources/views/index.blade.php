@@ -25,13 +25,13 @@
           </form>
         </div>
         <div id="link">
-          <a href="mypage">mypage</a>
+          <a href="mypage">Mypage</a>
         </div>
         <div id="writing">
           <?php foreach($movies as $value):  ?>
             <div class="thumb">
+              <a href="movie/{{$value->id}}"><img src="{{$value->thumbnail}}"></a>
               <p id="movie_title"><a href="movie/{{$value->id}}">{{ $value->text }}</a></p>
-              <a href="movie/{{$value->id}}"><img src="{{$value->thumbnail}}" height="140" width="220"></a>
               <p id="movie_time">{{ $value->time }}</p>
               <div id="movie_2">
                 <p id="movie_title2"><a href="movie/{{$value->id}}">{{ $value->text }}</a></p>
