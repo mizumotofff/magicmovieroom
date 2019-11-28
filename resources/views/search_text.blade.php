@@ -32,12 +32,12 @@
         <div id="search_form">
           <form action="search" method="get">
             <input type="text" name="search" id="search_text">
-            <button type="submit" id="search_button">SEARCH</button>
+            <button type="submit" id="search_button">Search</button>
           </form>
         </div>
         <div id="link">
           <!-- <a href="magic_bar">magic bar</a> -->
-          <a href="mypage">mypage</a>
+          <a id="top_link" href="mypage">mypage</a>
         </div>
         <div id="writing">
           <h1 id="main_title">検索結果がありませんでした</h1>
