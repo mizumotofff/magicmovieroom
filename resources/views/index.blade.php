@@ -25,7 +25,7 @@
           </form>
         </div>
         <div id="link">
-          <a href="mypage">Mypage</a>
+          <a id="top_link" href="mypage">Mypage</a>
         </div>
         <div id="writing">
           <?php foreach($movies as $value):  ?>

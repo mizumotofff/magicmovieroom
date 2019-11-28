@@ -500,6 +500,14 @@ video{
     color: #666;
   }
 
+  #top_link{
+    transition: 0.3s;
+  }
+
+  #top_link:hover{
+    color: #ff0091;
+  }
+
   #writing_mypage{
     /* border: solid 1px #000; */
     display: inline-block;
