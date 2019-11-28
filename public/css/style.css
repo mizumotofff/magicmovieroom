@@ -76,7 +76,7 @@ td,th{
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #777;
+  background-color: #eee;
   margin: 10px auto;
 }
 
@@ -571,7 +571,7 @@ video{
   #tweet textarea{
     height: 100px;
     width: 340px;
-    border: none;
+    border: solid 1px #000;
     resize: none;
     border-radius: 3px;
   }
@@ -584,8 +584,8 @@ video{
     padding: 0.25em 0.5em;
     text-decoration: none;
     color: #FFF;
-    background: #03A9F4;/*色*/
-    border: solid 1px #0f9ada;/*線色*/
+    background: #ff0091;/*色*/
+    border: solid 1px #ff0091;/*線色*/
     border-radius: 4px;
     box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
     text-shadow: 0 1px 0 rgba(0,0,0,0.2);
