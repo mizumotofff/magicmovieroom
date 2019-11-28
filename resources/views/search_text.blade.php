@@ -37,7 +37,7 @@
         </div>
         <div id="link">
           <!-- <a href="magic_bar">magic bar</a> -->
-          <a id="top_link" href="mypage">mypage</a>
+          <a id="top_link" href="mypage">Mypage</a>
         </div>
         <div id="writing">
           <h1 id="main_title">検索結果がありませんでした</h1>
