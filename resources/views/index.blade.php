@@ -21,7 +21,7 @@
         <div id="search_form">
           <form action="search" method="get">
             <input type="text" name="search" id="search_text">
-            <button type="submit" id="search_button">SEARCH</button>
+            <button type="submit" id="search_button">Search</button>
           </form>
         </div>
         <div id="link">

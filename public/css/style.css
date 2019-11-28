@@ -487,6 +487,12 @@ video{
     color:#333;
     cursor:pointer;
     display: inline-flex;
+    background-color: #ff0091;
+    transition: 0.3s;
+  }
+
+  #search_button:hover{
+    background-color: #a5bbfa;
   }
 
   #movie_time{
