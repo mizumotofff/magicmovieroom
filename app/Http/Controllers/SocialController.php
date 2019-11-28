@@ -18,6 +18,7 @@ class SocialController extends Controller
      *
      * @return void
      */
+
     public function __construct()
     {
         $this->middleware('auth');
@@ -31,7 +32,8 @@ class SocialController extends Controller
      */
     public function index()
     {
-        $movie = Movie::all();
+        // $movie = Movie::all()->orderBy("id","desc");
+        $movie = Movie::orderBy("id","desc")->get();
         return view('index',array("movies" => $movie));
     }
 
@@ -43,7 +45,7 @@ class SocialController extends Controller
     public function mypage()
     {
         // $movie = Movie::all();
-        $movie = Movie::where("user_id",Auth::id())->get();
+        $movie = Movie::where("user_id",Auth::id())->orderBy("id","desc")->get();
         return view('mypage',array("movies" => $movie));
     }
 

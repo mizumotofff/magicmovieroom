@@ -240,10 +240,6 @@ video{
   color: #000;
 }
 
-#movie_title{
-  height: 25px;
-}
-
 .filename{
   font-size: 20px;
 }
@@ -493,6 +489,12 @@ video{
     display: inline-flex;
   }
 
+  #movie_time{
+    float: right;
+    margin-right: 5px;
+    color: #666;
+  }
+
   #writing_mypage{
     /* border: solid 1px #000; */
     display: inline-block;
@@ -542,7 +544,7 @@ video{
 
   .thumb{
     /* float: left; */
-    text-align: center;
+    /* text-align: center; */
     /* border: solid 1px #000; */
     display: inline-block;
     /* padding: 5px; */
@@ -550,6 +552,12 @@ video{
     background-color: #fff;
     color: #000;
     /* border-radius: 5px; */
+    /* opacity: 1; */
+    transition: 0.3s;
+  }
+
+  .thumb:hover{
+    background-color: #ccc;
   }
 
   #movie_page h2{
@@ -640,4 +648,11 @@ video{
     padding-right: 30px;
     font-size: 20px;
   }
+
+
+  #movie_title{
+    height: 25px;
+    margin-left: 5px;
+  }
+
 }

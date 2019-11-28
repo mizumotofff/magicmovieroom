@@ -12,5 +12,7 @@ class Movie extends Model
      * @var string
      */
      public $timestamps = false;
+
+    protected $dates = ['time'];
     protected $table = 'Movie';
 }
