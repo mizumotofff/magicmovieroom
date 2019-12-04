@@ -104,7 +104,7 @@ class SocialController extends Controller
       $movieRegist = new Movie;
       $movieRegist->text = $movieTitle;
       $movieRegist->user_id = Auth::id();
-      $movieRegist->movie = $thumbnailUrl;
+      $movieRegist->movie = $movieUrl;
       $movieRegist->thumbnail = $thumbnailUrl;
       $movieRegist->time = date("Y-m-d H:i:s");
       $movieRegist->save();
