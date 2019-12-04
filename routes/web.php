@@ -16,11 +16,9 @@
 Route::get('/', 'SocialController@index');
 Route::get('/react', 'SocialController@react');
 Route::post('/comment', 'SocialController@comment');
-Route::post('/movie_post', 'SocialController@movie_post');
 Route::get('/movie/{id}', 'SocialController@movie');
 Route::get('/mypage', 'SocialController@mypage');
 Route::get('/magic_bar', 'SocialController@magic_bar');
-// Route::post('/movie/{id}', 'SocialController@movie');
 Route::get('upload', 'SocialController@create');
 Route::post('upload', 'SocialController@store');
 Route::get('search', 'SocialController@search');
@@ -28,11 +26,3 @@ Route::get('search', 'SocialController@search');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
-// Route::middleware(['cors'])->group(function () {
-//     Route::options('react', function () {
-//         return response()->json();
-//     });
-//
-//     Route::get('/react', 'SocialController@react');
-// });

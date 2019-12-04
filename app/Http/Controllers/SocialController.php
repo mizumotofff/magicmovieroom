@@ -32,21 +32,14 @@ class SocialController extends Controller
      */
     public function index()
     {
-        // $movie = Movie::all()->orderBy("id","desc");
-        $movie = Movie::orderBy("id","desc")->get();
-        return view('index',array("movies" => $movie));
-    }
-
-    public function magic_bar()
-    {
-        return view('magic_bar');
+        $movies = Movie::orderBy("id","desc")->get();
+        return view('index',array("movies" => $movies));
     }
 
     public function mypage()
     {
-        // $movie = Movie::all();
-        $movie = Movie::where("user_id",Auth::id())->orderBy("id","desc")->get();
-        return view('mypage',array("movies" => $movie));
+        $movies = Movie::where("user_id",Auth::id())->orderBy("id","desc")->get();
+        return view('mypage',array("movies" => $movies));
     }
 
     public function comment(Request $request){
@@ -56,40 +49,18 @@ class SocialController extends Controller
         'id' => 'required'
       ]);
 
-      $a = $_POST;
-
       $id = $request->id;
 
-      $com = new Comment;
-      $com->text = $request->text;
-      $com->user_id = Auth::id();
-      $com->movie_id = $id;
-      $com->time = date("Y-m-d H:i:s");
-      $com->save();
+      $comment = new Comment;
+      $comment->text = $request->text;
+      $comment->user_id = Auth::id();
+      $comment->movie_id = $id;
+      $comment->time = date("Y-m-d H:i:s");
+      $comment->save();
 
       return redirect()->action('SocialController@movie',array("id" => $id));
     }
 
-
-    public function movie_post(Request $request){
-
-      $validatedData = $request->validate([
-        'title' => 'required|max:255',
-      ]);
-
-      $a = $_POST;
-      $youtube_id = explode("=",$request->url);
-
-      $com = new Movie;
-      $com->text = $request->title;
-      $com->user_id = Auth::id();
-      $com->movie = $youtube_id[1];
-      $com->time = date("Y-m-d H:i:s");
-      $com->save();
-
-      $comment = movie::all();
-      return redirect()->action('SocialController@index');
-    }
 
     public function movie($id){
       $id = intval($id);
@@ -118,36 +89,33 @@ class SocialController extends Controller
         'thumbnail' => 'required|mimes:jpeg,png,bmp',
         'movie_title' => 'required|max:100',
       ]);
-      $file = $request->file('file');
-      $name = $request->input('movie_title');
-      $name_url = $name.".mp4";
 
-      $file_pic = $request->file('thumbnail');
-      $name_pic = $request->file('thumbnail')->getClientOriginalName().'.'.$request->file('thumbnail')->getClientOriginalExtension();
+      $movieFile = $request->file('file');
+      $movieTitle = $request->input('movie_title');
+      $movieName = $movieTitle.".mp4";
+      $path = Storage::disk('s3')->putFileAs('/', $movieFile, $movieName, 'public');
+      $movieUrl = Storage::disk('s3')->url($movieName);
 
-      $path = Storage::disk('s3')->putFileAs('/', $file, $name_url, 'public');
-      $path = Storage::disk('s3')->putFileAs('/', $file_pic, $name_pic, 'public');
-      // return redirect('/');
-      $url = Storage::disk('s3')->url($name_url);
-      $url_pic = Storage::disk('s3')->url($name_pic);
+      $thumbnailFile = $request->file('thumbnail');
+      $thumbnailName = $request->file('thumbnail')->getClientOriginalName().'.'.$request->file('thumbnail')->getClientOriginalExtension();
+      $path = Storage::disk('s3')->putFileAs('/', $thumbnailFile, $thumbnailName, 'public');
+      $thumbnailUrl = Storage::disk('s3')->url($thumbnailName);
 
-      $com = new Movie;
+      $movieRegist = new Movie;
+      $movieRegist->text = $movieTitle;
+      $movieRegist->user_id = Auth::id();
+      $movieRegist->movie = $thumbnailUrl;
+      $movieRegist->thumbnail = $thumbnailUrl;
+      $movieRegist->time = date("Y-m-d H:i:s");
+      $movieRegist->save();
 
-      $com->text = $name;
-      $com->user_id = Auth::id();
-      $com->movie = $url;
-      $com->thumbnail = $url_pic;
-      $com->time = date("Y-m-d H:i:s");
-      $com->save();
-
-      $movie = Movie::where("user_id",Auth::id())->get();
-      return view('mypage',array("movies" => $movie));
+      $movies = Movie::where("user_id",Auth::id())->orderBy("id","desc")->get();
+      return view('mypage',array("movies" => $movies));
 
     }
 
     public function search(Request $request)
     {
-        // $movies = Movie::all();
         $search = $request->input('search');
         $movies = Movie::where('text', 'LIKE',"%$search%")->get();
 
