@@ -18,9 +18,12 @@ Route::get('/react', 'SocialController@react');
 Route::post('/comment', 'SocialController@comment');
 Route::get('/movie/{id}', 'SocialController@movie');
 Route::get('/mypage', 'SocialController@mypage');
+Route::get('/review', 'SocialController@reviewTop');
+Route::get('/reviews/{university}/{age}', 'SocialController@review');
 Route::get('/magic_bar', 'SocialController@magic_bar');
 Route::get('upload', 'SocialController@create');
 Route::post('upload', 'SocialController@store');
+Route::post('review_store', 'SocialController@reviewStore');
 Route::get('search', 'SocialController@search');
 
 Auth::routes();

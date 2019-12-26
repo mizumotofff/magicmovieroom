@@ -668,4 +668,37 @@ video{
     margin-left: 5px;
   }
 
+
+  .review__form{
+    text-align: center;
+  }
+  .review__form input ,.review__form select{
+    width: 200px;
+  }
+
+  .review__form textarea{
+    width: 400px;
+    height: 150px;
+  }
+
+  .review__title{
+    text-align: center;
+  }
+
+  .review__view{
+  }
+
+  .review__comment{
+    text-align: left;
+    margin: 50px auto;
+    width: 600px;
+  }
+
+  .review__text--category{
+    font-size: 30px;
+    border-bottom: solid 1px #ff0091;
+
+    margin: 10px 0px;
+  }
+
 }
