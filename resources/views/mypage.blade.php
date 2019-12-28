@@ -32,7 +32,7 @@
                   @endforeach
                 @endif
                 <div id="mform">
-                  <label id="movie_button">Movie
+                  <label id="movie_button"><p class="movie__button--text">Movie</p>
                     <input type="file" id="filem" name="file">
                   </label>
                   @if($errors->has('file'))
@@ -42,7 +42,7 @@
                   @endif
                 </div><br>
                 <div id="tform">
-                  <label id="thumbnail_post">Thumbnail
+                  <label id="thumbnail_post"><p class="movie__button--text">Thumbnail</p>
                     <input type="file" id="filet" name="thumbnail">
                   </label>
                   @if($errors->has('thumbnail'))

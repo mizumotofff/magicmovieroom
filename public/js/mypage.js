@@ -19,5 +19,17 @@ $(function(){
      // $("#input-label").addClass('changed');
    });
 
+   $(".review__univ").hover(function(){
+     if($(this).children('.review__age').hasClass('open')){
+       const age = $(this).children('.review__age').removeClass('open');
+       $(this).children('.review__age').fadeOut(1);
+     }else{
+       const age = $(this).children('.review__age').addClass('open');
+       $(this).children('.review__age').fadeIn(1);
+     }
+     // age.addclass("open");
+     console.log(age);
+   })
+
 
  });

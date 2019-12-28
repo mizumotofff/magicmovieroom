@@ -17,7 +17,45 @@
         <div class="review__title">
           <a href="/"><h1 id="main_title">Magic Room</h1></a>
         </div>
-                  <a id="top_link" href="reviews/マギー/1976">1976</a>
+        <div class="review__univs">
+          <div class="review__univ">
+            <p class="review__univ--title">マギーグルッペ</p>
+            <div class="review__age">
+              <a href="reviews/マギー/1976"><p class="review__age--link">2012</p></a>
+              <a href="reviews/マギー/1976"><p class="review__age--link">2012</p></a>
+              <a href="reviews/マギー/1976"><p class="review__age--link">2012</p></a>
+              <a href="reviews/マギー/1976"><p class="review__age--link">2012</p></a>
+              <a href="reviews/マギー/1976"><p class="review__age--link">2012</p></a>
+              <a href="reviews/マギー/1976"><p class="review__age--link">2012</p></a>
+              <a href="reviews/マギー/1976"><p class="review__age--link">2012</p></a>
+            </div>
+          </div>
+          <div class="review__univ">
+            <p class="review__univ--title">フェロー</p>
+            <div class="review__age">
+              <a href="reviews/マギー/1976"><p class="review__age--link">2012</p></a>
+              <a href="reviews/マギー/1976"><p class="review__age--link">2012</p></a>
+              <a href="reviews/マギー/1976"><p class="review__age--link">2012</p></a>
+              <a href="reviews/マギー/1976"><p class="review__age--link">2012</p></a>
+              <a href="reviews/マギー/1976"><p class="review__age--link">2012</p></a>
+              <a href="reviews/マギー/1976"><p class="review__age--link">2012</p></a>
+              <a href="reviews/マギー/1976"><p class="review__age--link">2012</p></a>
+            </div>
+          </div>
+          <div class="review__univ">
+            <p class="review__univ--title">東洋</p>
+            <div class="review__age">
+              <a href="reviews/マギー/1976"><p class="review__age--link">2012</p></a>
+              <a href="reviews/マギー/1976"><p class="review__age--link">2012</p></a>
+              <a href="reviews/マギー/1976"><p class="review__age--link">2012</p></a>
+              <a href="reviews/マギー/1976"><p class="review__age--link">2012</p></a>
+              <a href="reviews/マギー/1976"><p class="review__age--link">2012</p></a>
+              <a href="reviews/マギー/1976"><p class="review__age--link">2012</p></a>
+              <a href="reviews/マギー/1976"><p class="review__age--link">2012</p></a>
+            </div>
+          </div>
+
+          </div>
         <div class="review__form">
               <form action="review_store" method="post" enctype="multipart/form-data">
 
@@ -57,7 +95,7 @@
                 <!-- <input type="text" class="text" name="category"><br> -->
                 <span id="comment_title">review</span><br>
                 <textarea class="text" name="text"></textarea><br>
-                <button type="submit" value="書き込む">POST</button>
+                <button class="review__form--button" type="submit" value="書き込む">POST</button>
               </form>
           </div>
         </div>
