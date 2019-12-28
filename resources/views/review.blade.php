@@ -13,6 +13,7 @@
         <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
     </head>
     <body class="review">
+      <a href="/"><h3 class="review__link">&ltBefore</h3></a>
       <div class="review__content">
         <div class="review__title">
           <a href="/"><h1 id="main_title">Magic Room</h1></a>
