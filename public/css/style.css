@@ -482,14 +482,16 @@ video{
     border: none;
     height: 40px;
     line-height: 40px;
-    margin:0 0 20px;
-    font-size:1.2em;
+    margin:0 0 25px;
+    font-size:24px;
     /* font-weight:bold; */
-    color:#333;
+    color:#fff;
     cursor:pointer;
     display: inline-flex;
     background-color: #ff0091;
     transition: 0.3s;
+    font-weight: 500;
+
   }
 
   #search_button:hover{
@@ -614,7 +616,9 @@ video{
     text-decoration: none;
     color: #FFF;
     background: #ff0091;/*色*/
-    border: solid 1px #ff0091;/*線色*/
+    border: none;/*線色*/
+    font-size: 24px;
+    font-weight: 700;
     border-radius: 4px;
     box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
     text-shadow: 0 1px 0 rgba(0,0,0,0.2);
