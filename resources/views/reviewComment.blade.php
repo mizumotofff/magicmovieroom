@@ -13,13 +13,13 @@
         <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
     </head>
     <body class="review">
+      <a href="/review"><h3 class="review__link">&ltBefore</h3></a>
       <div class="review__content">
         <div class="review__title">
           <a href="/"><h1 id="main_title">Magic Room</h1></a>
         </div>
           <div class="review__view">
             <h1 class="review__view--title">{{ $reviews[0]->age }}/{{ $reviews[0]->university }}</h1>
-            <a href="/review"><h3 class="review__link">大学選択画面</h3></a>
             <?php foreach($reviews as $value):  ?>
               <div class="review__comment">
                 <p class="review__text--category">{{ $value->category }}</p>

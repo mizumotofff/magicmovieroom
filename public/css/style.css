@@ -685,13 +685,15 @@ video{
     display: inline-block;
     width: 500px;
   }
-  .review__form input ,.review__form select{
-    width: 200px;
-  }
 
   .review__form textarea{
     width: 400px;
     height: 150px;
+
+    border-radius: 5px;
+    padding: 5px;
+    border: none;
+    box-shadow: 0 0 2px rgb(204, 204, 204);
   }
 
   .review__title{
@@ -718,9 +720,9 @@ video{
     margin-top: 20px;
     margin-left: 50px;
     position:absolute;
-    font-size: 20px;
-    background-color: #ff0091;
-    color: #fff;
+    font-size: 24px;
+    /* background-color: #ff0091; */
+    color: #ff0091;
     padding: 10px;
     border-radius: 3px;
   }
@@ -797,6 +799,28 @@ video{
 
   .review__form--button:hover{
     background-color: #a5bbfa;
+  }
+
+  .review__form select{
+    border-radius: 5px;
+    padding: 5px;
+    border: none;
+    box-shadow: 0 0 2px rgb(204, 204, 204);
+    cursor: pointer;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    width: 200px;
+  }
+
+  .review__form input{
+    border-radius: 5px;
+    padding: 5px;
+    border: none;
+    box-shadow: 0 0 2px rgb(204, 204, 204);
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    width: 190px;
+    -moz-appearance:textfield;
   }
 
 
