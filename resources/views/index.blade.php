@@ -32,7 +32,7 @@
           <?php foreach($movies as $value):  ?>
             <div class="thumb">
               <a href="movie/{{$value->id}}"><img src="{{$value->thumbnail}}"></a>
-              <p id="movie_title"><a href="movie/{{$value->id}}">{{ $value->text }}</a></p>
+              <p id="movie_title"><a href="{{ url( 'movie/$value->id') }}">{{ $value->text }}</a></p>
               <p id="movie_time">{{ $value->time->format('Y-m-d') }}</p>
               <div id="movie_2">
                 <p id="movie_title2"><a href="movie/{{$value->id}}">{{ $value->text }}</a></p>

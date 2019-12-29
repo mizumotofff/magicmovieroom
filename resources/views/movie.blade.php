@@ -24,7 +24,7 @@
       <!-- content -->
       <div id="content">
         <div id="title">
-          <a href="/"><h1 id="main_title">Magic Room</h1></a>
+          <a href="{{ url('/') }}"><h1 id="main_title">Magic Room</h1></a>
         </div>
         <video src="{{ $movie->movie }}" controls></video>
         <h2 id="content__title">{{ $movie->text}}</h2>
