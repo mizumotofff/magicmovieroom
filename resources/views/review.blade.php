@@ -16,7 +16,7 @@
       <a href="{{ url('/') }}"><h3 class="review__link">&ltBefore</h3></a>
       <div class="review__content">
         <div class="review__title">
-          <a href="/"><h1 id="main_title">Magic Room</h1></a>
+          <a href="{{ url('/') }}"><h1 id="main_title">Magic Room</h1></a>
         </div>
         <div class="review__univs">
           <div class="review__univ">
