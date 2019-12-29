@@ -16,7 +16,7 @@
       <!-- content -->
       <div id="content">
         <div id="title">
-          <a href="/"><h1 id="main_title">Magic Room</h1></a>
+          <a href="{{ url('/') }}"><h1 id="main_title">Magic Room</h1></a>
         </div>
         <div id="search_form">
           <form action="search" method="get">
