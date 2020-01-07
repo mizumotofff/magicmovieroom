@@ -13,50 +13,28 @@
         <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
     </head>
     <body class="review">
-      <a href="{{ url('/') }}"><h3 class="review__link">&ltBefore</h3></a>
+      <a href="{{ url('/') }}"><h3 class="review__link">Before</h3></a>
+
       <div class="review__content">
         <div class="review__title">
           <a href="{{ url('/') }}"><h1 id="main_title">Magic Room</h1></a>
         </div>
         <div class="review__univs">
-          <div class="review__univ">
-            <p class="review__univ--title">マギーグルッペ</p>
-            <div class="review__age">
-              <a href="reviews/マギー/1976"><p class="review__age--link">2012</p></a>
-              <a href="reviews/マギー/1976"><p class="review__age--link">2012</p></a>
-              <a href="reviews/マギー/1976"><p class="review__age--link">2012</p></a>
-              <a href="reviews/マギー/1976"><p class="review__age--link">2012</p></a>
-              <a href="reviews/マギー/1976"><p class="review__age--link">2012</p></a>
-              <a href="reviews/マギー/1976"><p class="review__age--link">2012</p></a>
-              <a href="reviews/マギー/1976"><p class="review__age--link">2012</p></a>
-            </div>
-          </div>
-          <div class="review__univ">
-            <p class="review__univ--title">フェロー</p>
-            <div class="review__age">
-              <a href="reviews/マギー/1976"><p class="review__age--link">2012</p></a>
-              <a href="reviews/マギー/1976"><p class="review__age--link">2012</p></a>
-              <a href="reviews/マギー/1976"><p class="review__age--link">2012</p></a>
-              <a href="reviews/マギー/1976"><p class="review__age--link">2012</p></a>
-              <a href="reviews/マギー/1976"><p class="review__age--link">2012</p></a>
-              <a href="reviews/マギー/1976"><p class="review__age--link">2012</p></a>
-              <a href="reviews/マギー/1976"><p class="review__age--link">2012</p></a>
-            </div>
-          </div>
-          <div class="review__univ">
-            <p class="review__univ--title">東洋</p>
-            <div class="review__age">
-              <a href="reviews/マギー/1976"><p class="review__age--link">2012</p></a>
-              <a href="reviews/マギー/1976"><p class="review__age--link">2012</p></a>
-              <a href="reviews/マギー/1976"><p class="review__age--link">2012</p></a>
-              <a href="reviews/マギー/1976"><p class="review__age--link">2012</p></a>
-              <a href="reviews/マギー/1976"><p class="review__age--link">2012</p></a>
-              <a href="reviews/マギー/1976"><p class="review__age--link">2012</p></a>
-              <a href="reviews/マギー/1976"><p class="review__age--link">2012</p></a>
-            </div>
-          </div>
 
-          </div>
+          <?php foreach($reviews as $university => $review):  ?>
+            <div class="review__univ">
+              <p class="review__univ--title">{{ $university }}</p>
+
+              <?php foreach($review as $age):  ?>
+              <div class="review__age">
+                <a href="reviews/{{ $university }}/{{ $age }}"><p class="review__age--link">{{ $age }}</p></a>
+              </div>
+              <?php endforeach; ?>
+
+            </div>
+          <?php endforeach; ?>
+
+        </div>
         <div class="review__form">
               <form action="review_store" method="post" enctype="multipart/form-data">
 

@@ -13,7 +13,7 @@ body{
 }
 
 #movie_page {
-    text-align: center;
+    /* text-align: center; */
 }
 
 #footer{
@@ -749,14 +749,31 @@ video{
     width: 250px;
     display: inline-block;
     border: solid 1px #000;
+    border-left: solid 1px #000;
     border-collapse: collapse;
     margin-bottom: -1px;
+    transition: 0.3s;
+    /* margin-bottom: 5px;
+    transition: 0.3s;
+    border-bottom: solid 1px #eee; */
+    cursor: pointer;
+  }
+
+  .review__univ:hover{
+    /* border-left: solid 1px #eee;
+    border-bottom: solid 1px #000; */
+    /* border-right: none; */
+    /* background-color: #ccc; */
   }
 
   .review__univ--title{
     font-weight: bold;
     font-size: 20px;
     margin: 10px 0;
+  }
+
+  .pink{
+    color: #ff0091;
   }
 
   .review__age{

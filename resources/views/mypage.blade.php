@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="{{ asset('js/jquery-3.4.1.min.js') }}"></script>
         <script src="{{ asset('js/mypage.js') }}"></script>
+        <script src="{{ asset('js/dropzone.js') }}"></script>
         <title>Magic Room</title>
         <script src="http://maps.google.com/maps/api/js?key=AIzaSyD3J7gJb9WgxkAiNRJ6r_hRw---SSRC2ZE&language=ja"></script>
 
@@ -13,6 +14,7 @@
         <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
     </head>
     <body id="my">
+      <a href="{{ url('/') }}"><h3 class="review__link">Before</h3></a>
       <div id="content">
         <div id="title">
           <a href="{{ url('/') }}"><h1 id="main_title">Magic Room</h1></a>

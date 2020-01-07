@@ -155,7 +155,21 @@ class SocialController extends Controller
     {
       // var_dump($university);
       // $reviews = Review::get();
-      return view('review');
+      $review  = DB::table('review')
+                            ->select('university','age')
+                            ->distinct()
+                            ->orderBy('university','asc')
+                            ->orderBy('age','asc')
+                            ->get();
+
+      $reviews = Array();
+
+      foreach ($review as $key => $value) {
+        $reviews[$value->university][] = $value->age;
+      }
+
+      return view('review',array("reviews" => $reviews));
     }
+
 
 }
