@@ -52,7 +52,7 @@
       </div>
 
       <video id="test" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" width="640" height="360" data-setup="{}">
-  <source src="https://d27q180g4usl58.cloudfront.net/whim3mov.m3u8" type="application/x-mpegURL">
+  <source src="https://d27q180g4usl58.cloudfront.net/gunman.m3u8" type="application/x-mpegURL">
 </video>
 
       <!-- <video id="test" class="video-js" src="https://d27q180g4usl58.cloudfront.net/whim3.m3u8">
