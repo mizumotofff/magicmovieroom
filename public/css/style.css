@@ -31,8 +31,14 @@ body{
 
 #movie_page video{
   background-color: #000;
-  margin-bottom: 20px;s
+  margin: 0 auto;
+  /* margin-bottom: 20px; */
+  text-align: center;
 }
+
+ #movie__video{
+   margin: 40px auto;
+ }
 
 h1{
   text-align: center;
@@ -195,11 +201,11 @@ a:visited {
   color: #000;
 }
 
-video{
+/* video{
   margin:40px 0px;
   width: 640px;
   height: 360px;
-}
+} */
 
 #contributor{
   /* float: right; */

@@ -30,7 +30,10 @@
         <div id="title">
           <a href="{{ url('/') }}"><h1 id="main_title">Magic Room</h1></a>
         </div>
-        <video src="{{ $movie->movie }}" controls></video>
+        <video id="movie__video" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" width="640" height="480" data-setup="{}">
+          <source src="{{ $movie->movie }}" type="application/x-mpegURL">
+          </video>
+        <!-- <video src="{{ $movie->movie }}" controls></video> -->
         <h2 id="content__title">{{ $movie->text}}</h2>
         <div id="comment_form">
           <?php foreach($texts as $value):  ?>
@@ -51,12 +54,6 @@
         </div>
       </div>
 
-      <video id="test" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" width="640" height="360" data-setup="{}">
-  <source src="https://d27q180g4usl58.cloudfront.net/gunman.m3u8" type="application/x-mpegURL">
-</video>
-
-      <!-- <video id="test" class="video-js" src="https://d27q180g4usl58.cloudfront.net/whim3.m3u8">
-</video> -->
 
     </body>
 </html>
