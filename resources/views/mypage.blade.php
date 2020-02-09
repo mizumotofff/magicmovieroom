@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="{{ asset('js/jquery-3.4.1.min.js') }}"></script>
         <script src="{{ asset('js/mypage.js') }}"></script>
+        <script src="{{ asset('js/dropzone.js') }}"></script>
         <title>Magic Room</title>
         <script src="http://maps.google.com/maps/api/js?key=AIzaSyD3J7gJb9WgxkAiNRJ6r_hRw---SSRC2ZE&language=ja"></script>
 
@@ -13,9 +14,10 @@
         <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
     </head>
     <body id="my">
+      <a href="{{ url('/') }}"><h3 class="review__link">Before</h3></a>
       <div id="content">
         <div id="title">
-          <a href="/"><h1 id="main_title">Magic Room</h1></a>
+          <a href="{{ url('/') }}"><h1 id="main_title">Magic Room</h1></a>
         </div>
         <div id="writing_mypage">
           <div id="movie_post">
@@ -32,7 +34,7 @@
                   @endforeach
                 @endif
                 <div id="mform">
-                  <label id="movie_button">Movie
+                  <label id="movie_button"><p class="movie__button--text">Movie</p>
                     <input type="file" id="filem" name="file">
                   </label>
                   @if($errors->has('file'))
@@ -42,7 +44,7 @@
                   @endif
                 </div><br>
                 <div id="tform">
-                  <label id="thumbnail_post">Thumbnail
+                  <label id="thumbnail_post"><p class="movie__button--text">Thumbnail</p>
                     <input type="file" id="filet" name="thumbnail">
                   </label>
                   @if($errors->has('thumbnail'))

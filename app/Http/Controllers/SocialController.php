@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Auth;
 use magicmovieroom\Comment;
 use magicmovieroom\Movie;
 use magicmovieroom\User;
+use magicmovieroom\Review;
 
 class SocialController extends Controller
 {
@@ -60,6 +61,23 @@ class SocialController extends Controller
 
       return redirect()->action('SocialController@movie',array("id" => $id));
     }
+
+    public function reviewStore(Request $request){
+
+      $validatedData = $request->validate([
+        'text' => 'required|max:255',
+      ]);
+
+      $review = new Review;
+      $review->text = $request->text;
+      $review->university = $request->university;
+      $review->age = $request->age;
+      $review->category = $request->category;
+      $review->save();
+
+      return redirect()->action('SocialController@reviewTop');
+    }
+
 
 
     public function movie($id){
@@ -124,5 +142,34 @@ class SocialController extends Controller
         }
         return view('index',array("movies" => $movies));
     }
+
+    public function review($university,$age)
+    {
+      // var_dump($university);
+      // $reviews = Review::get();
+      $reviews = Review::where("university",$university)->where("age",$age)->get();
+      return view('reviewComment',array("reviews" => $reviews));
+    }
+
+    public function reviewTop()
+    {
+      // var_dump($university);
+      // $reviews = Review::get();
+      $review  = DB::table('review')
+                            ->select('university','age')
+                            ->distinct()
+                            ->orderBy('university','asc')
+                            ->orderBy('age','asc')
+                            ->get();
+
+      $reviews = Array();
+
+      foreach ($review as $key => $value) {
+        $reviews[$value->university][] = $value->age;
+      }
+
+      return view('review',array("reviews" => $reviews));
+    }
+
 
 }

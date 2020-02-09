@@ -16,7 +16,7 @@
       <!-- content -->
       <div id="content">
         <div id="title">
-          <a href="/"><h1 id="main_title">Magic Room</h1></a>
+          <a href="{{ url('/') }}"><h1 id="main_title">Magic Room</h1></a>
         </div>
         <div id="search_form">
           <form action="search" method="get">
@@ -26,12 +26,13 @@
         </div>
         <div id="link">
           <a id="top_link" href="mypage">Mypage</a>
+          <a id="top_link" href="review">Review</a>
         </div>
         <div id="writing">
           <?php foreach($movies as $value):  ?>
             <div class="thumb">
               <a href="movie/{{$value->id}}"><img src="{{$value->thumbnail}}"></a>
-              <p id="movie_title"><a href="movie/{{$value->id}}">{{ $value->text }}</a></p>
+              <p id="movie_title"><a href="{{ url( 'movie/$value->id') }}">{{ $value->text }}</a></p>
               <p id="movie_time">{{ $value->time->format('Y-m-d') }}</p>
               <div id="movie_2">
                 <p id="movie_title2"><a href="movie/{{$value->id}}">{{ $value->text }}</a></p>

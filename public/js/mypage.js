@@ -19,5 +19,22 @@ $(function(){
      // $("#input-label").addClass('changed');
    });
 
+   $(".review__univ").click(function(){
+     if($(this).children('.review__age').hasClass('open')){
+       $('.review__univ--title').removeClass('pink');
+       const age = $(this).children('.review__age').removeClass('open');
+       $(this).children('.review__age').fadeOut(300);
+     }else{
+       $('.review__univ--title').removeClass('pink');
+       $(this).children('.review__univ--title').addClass('pink');
+       $('.review__age').removeClass('open');
+       $('.review__age').fadeOut(1);
+       const age = $(this).children('.review__age').addClass('open');
+       $(this).children('.review__age').fadeIn(300);
+     }
+     // age.addclass("open");
+     console.log(age);
+   })
+
 
  });
